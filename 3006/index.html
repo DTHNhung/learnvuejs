@@ -18,6 +18,15 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
+      <p>{{ courseGoal }}</p>
+      <p>{{ outputGoal() }}</p>
+
+      <!-- error -->
+      <!-- <p>Learn more <a href="{{ vueLink }}">about Vue</a>.</p> -->
+      <!-- error -->
+
+      <!-- v-bind them vao cac attributes neu chua data nhu href -->
+      <p>Learn more <a v-bind:href="vueLink">about Vue</a>.</p>
       <p>{{ text }}</p>
       <button @click="output">Random</button>
 
