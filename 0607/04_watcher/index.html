@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events">
+      <h2>Action with watcher</h2>
+      <!-- <input type="text" v-bind:value="name" v-on:input="setName($event, 'Schwarzmüller')"> -->
+      <!-- Thay vi su dung v-bind:value va v-on, su dung v-model -->
+      <div id="input">
+        <div>
+          <label for="name">Name </label>
+          <input type="text" name="name" v-model="name">
+        </div>
+        <div>
+          <label for="name">Last name </label>
+          <input type="text" name="lastName" v-model="lastName">
+        </div>
+      </div>
+      <button @click="resetInput">Reset Input</button>
+      <p>Your Name: {{ fullname }}</p>
+    </section>
+  </body>
+</html>
